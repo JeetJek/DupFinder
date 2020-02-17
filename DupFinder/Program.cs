@@ -12,7 +12,7 @@ namespace DupFinder
             {
                 if (args[0] == "--help" || args[0] == "-help")
                 {
-                    Console.WriteLine("Help:");
+                    Console.WriteLine("Help: \nВсе значения должны быть разделены пробелами.\nПример: 123 123 | 12 43 43");
                     return;
                 }
             }
