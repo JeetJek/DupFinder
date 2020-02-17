@@ -11,7 +11,7 @@ namespace DupFinder
             {
                 if (args[0] == "--help" || args[0] == "-help")
                 {
-                    Console.WriteLine("Help: \nВсе значения должны быть разделены пробелами.\nПример: 123 123 | 12 43 43");
+                    Console.WriteLine("Help: \nВсе значения должны быть разделены пробелами. В качестве разделителями между \"строками\" рекомендую использовать <> \nПример: 123 123 <> 12 43 43");
                     return;
                 }
             }
@@ -50,8 +50,7 @@ namespace DupFinder
                     Console.Write(args[i] + " ");
                 }
                 else
-                {
-                    Console.ForegroundColor = ConsoleColor.White;
+                {                    
                     Console.Write(args[i] + " ");
                 }
 
