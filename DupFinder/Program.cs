@@ -22,22 +22,28 @@ namespace DupFinder
             list.Add(args[0]);
             Console.Write(args[0] + " ");
             int j2;
+            bool have;
             for (int i = 1; i < args.Length; i++)
             {
                 j2 = list.Count;
+                have = false;
                 for (int j = 0; j < j2; j++)
                 {
                     if (args[i] != list[j])
                     {
                         Console.ForegroundColor = ConsoleColor.White;
-                        list.Add(args[i]);
+                        have = false;
                     }
                     else
                     {
                         Console.ForegroundColor = ConsoleColor.Red;
+                        have = true;
                         break;
                     }
+                    
                 }
+                if (!have)
+                    list.Add(args[i]);
                 Console.Write(args[i] + " ");
             }
             Console.WriteLine();
