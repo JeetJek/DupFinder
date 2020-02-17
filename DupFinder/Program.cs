@@ -44,7 +44,17 @@ namespace DupFinder
                 }
                 if (!have)
                     list.Add(args[i]);
-                Console.Write(args[i] + " ");
+                if (args[i] == "<>")
+                {
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.Write(args[i] + " ");
+                }
+                else
+                {
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.Write(args[i] + " ");
+                }
+
             }
             Console.WriteLine();
         }
