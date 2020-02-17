@@ -17,6 +17,7 @@ namespace DupFinder
             }
             else
                 return;
+            Console.WriteLine("Output: -----------------------------------------------------------------");
             List<String> list = new List<string>();
             list.Add(args[0]);
             Console.Write(args[0] + " ");
